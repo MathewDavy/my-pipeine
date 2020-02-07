@@ -30,6 +30,21 @@ pipeline {
                 }
             }
    }
+      stage('Test1') {
+         parallel {
+             stage('Chrome1') {
+                 steps {
+                     sh 'echo "Chrome1"'
+                 }
+             }
+             stage('Firefox1') {
+                 steps {
+                     sh 'echo "Firefox1"'
+                 }
+             }
+         }
+   
+   }
       
    }
    
